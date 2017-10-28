@@ -1,17 +1,14 @@
 import React from 'react';
- 
+import FirstResult from './FirstResult'; 
+
 export default class Results extends React.Component {
     render() {
-        var results = this.props.results[1].map((result, index) => {
-            return (
-                <div>
-                    <h3>{this.props.results[1][index]}</h3>
-                    <p>{this.props.results[2][index]}</p>
-                    <a href={this.props.results[3][index]}>Link</a>
-                </div>
-            );
-        });
+      var results = this.props.results[1].map((result, index) => {
+        return (
+            <FirstResult key={index} title={this.props.results[1][index]} description={this.props.results[2][index]} url={this.props.results[3][index]}/>
+        );
+    });
  
-        return (<div>{results}</div>);
+        return (<div className="result-list">{results}</div>);
     }
 }

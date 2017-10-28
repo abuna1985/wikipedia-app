@@ -1,13 +1,19 @@
 import React from 'react';
 import SearchForm from './SearchForm';
+import Results from './Results';
 
 import superagent from 'superagent';
 import jsonp from 'superagent-jsonp'
  
-export default class WikipediaViewer extends React.Component {
+export default class WikipediaApp extends React.Component {
+    
     constructor() {
         super();
-        this.state = { results: [] };
+        this.state = { 
+          results: [
+            '', [], [], []
+          ] 
+        };
         this.handleSearch = this.handleSearch.bind(this);
     }
  
@@ -31,13 +37,8 @@ export default class WikipediaViewer extends React.Component {
     render() {
         return(
             <div className="wrapper">
-                <SearchForm onSearch={this.handleSearch}/>
-                <ul>
-                    <li>Result 1</li>
-                    <li>Result 2</li>
-                    <li>Result 3</li>
-                    <li>...</li>
-                </ul>
+              <SearchForm onSearch={this.handleSearch} />
+              <Results results={this.state.results} />
             </div>
         );
     }
