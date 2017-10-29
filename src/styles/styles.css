@@ -1,0 +1,123 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #125699;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #afafaf;
+}
+a:hover {
+  color: #fff;
+}
+::-webkit-input-placeholder {
+  color: #fff;
+}
+:-moz-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+::-moz-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #fff;
+}
+:placeholder-shown {
+  color: #fff;
+}
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.3s 0.3s ease;
+  opacity: 0;
+}
+.wrapper {
+  margin-top: 100px;
+  text-align: center;
+}
+.search-box-container {
+  margin-bottom: 10px;
+}
+.search-container__text {
+  background-color: transparent;
+  padding: 10px;
+  width: 90%;
+  max-width: 400px;
+  border: 1px solid #dedede;
+  border-radius: 40px;
+  color: #dedede;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 300;
+  outline-style: none;
+}
+.search-container__text:focus {
+  border-color: #ff8c00;
+  outline: none;
+}
+.search-box-submit {
+  border: 1px solid #dedede;
+  background-color: #dedede;
+  cursor: pointer;
+  padding: 10px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.search-box-submit:active {
+  background-color: #a3a3a3;
+}
+.search-box-submit:focus, .search-box-submitactive {
+  outline: none;
+}
+.random-link {
+  color: #f0f0f0;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+.result-list {
+  width: 100%;
+}
+.single-result {
+  color: #333;
+  text-decoration: none;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: block;
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin-bottom: 15px;
+  text-align: justify;
+  border-left: 5px solid #2f4f4f;
+  border-right: 5px solid #2f4f4f;
+  transition: 0.1s ease-out all;
+}
+.single-result p {
+  font-size: 0.8rem;
+}
+.single-result:hover {
+  color: #333;
+  border-color: #ff8c00;
+}
+.page-title {
+  font-size: 4rem;
+  padding: 0;
+  color: #f0f0f0;
+  font-weight: 700;
+}
+.tagline {
+  padding: 15px 0;
+  color: #f0f0f0;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+h3 {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+}

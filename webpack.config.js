@@ -1,28 +1,28 @@
-module.exports = {
-  entry: [
-    "./src/index.js"
-  ],
+const webpack = require('webpack');
+const path = require('path');
+
+
+const config = {
+  entry: path.resolve('src/index.js'),
+
   output: {
-    path: __dirname + '/docs',
+    path: path.resolve('dist'),
     filename: 'bundle.js'
   },
-  resolve: {
-    modulesDirectories: ['node_modules', 'src'],
-    extensions: ['', '.js', '.jsx', '.scss']
-  },
+
   module: {
-    loaders: [
-        {
-            test: /\.jsx?$/,
-            loader: ["babel"],
-            exclude: /node_modules/,
-            query: {
-                presets: ['react', 'es2015']
-            }
-        }, {
-            test: /\.scss$/,
-            loader: 'style!css!sass'
-        }
+    rules: [
+      {
+        test: /.js$/,
+        loader: 'babel-loader',
+      }
     ]
+  },
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    port: 9000
   }
 };
+
+module.exports = config;
